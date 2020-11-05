@@ -30,7 +30,6 @@ class SaleOrder(models.Model):
             self.payment_mode_id = False
         return res
 
-    @api.multi
     def _prepare_invoice(self):
         """Copy bank partner from sale order to invoice"""
         vals = super()._prepare_invoice()
